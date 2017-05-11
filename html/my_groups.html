@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://getbootstrap.com/examples/navbar-static-top/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Meet Up!</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/navbar-static-top.css" rel="stylesheet">
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../js/ie-emulation-modes-warning.js.download"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Meet Up!</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="past_events.php">Past Events</a></li>
+              <li><a href="future.php">Upcoming Events</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Groups</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Profile <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Interests</a></li>
+              <li><a href="my_groups.php">Groups</a></li>
+              <li><a href="my_events.php">Events</a></li>
+            </ul>
+          </li>
+          <li><a href="logout.php">Log Out</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+    <div class="container">
+      <a href="#" class="btn btn-danger btn-sm" id="createGroup" role="button">Create Group</a>
+      <!-- /.modal compose message -->
+      <div class="modal" id="modalCreate">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Create Group</h4>
+            </div>
+            <div class="modal-body">
+              <form role="form" class="form-horizontal" id="create_group" method="POST" action="/webDevProject/html/my_groups.php">
+                <div class="form-group">
+                  <label class="col-sm-2">Group Name</label>
+                  <div class="col-sm-10"><input type="text" name="group_name" class="form-control" id="group_name" placeholder="Name of Sponsoring Group" required></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2">Group Interest</label>
+                  <div class="col-sm-10"><input type="text" name="group_interest" class="form-control" id="group_interest" placeholder="Group Interest" required></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-12">Description</label>
+                  <div class="col-sm-12"><textarea class="form-control" name="description" id="description" rows="9"></textarea></div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" id="cancelCreate" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" type="submit" id="submit_group">Create<i class="fa fa-arrow-circle-right fa-lg"></i></button>
+              
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal compose message -->
+            </div> <!-- /container -->
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="../js/jquery.min.js.download"></script>
+            <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+            <script src="../js/bootstrap.min.js.download"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <script src="../js/ie10-viewport-bug-workaround.js.download"></script>
+            <script src="../js/createGroup.js"></script>
+          </body>
+        </html>
